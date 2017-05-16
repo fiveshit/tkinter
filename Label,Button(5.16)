@@ -1,0 +1,27 @@
+import tkinter as tk
+
+#establish 200x200 geometery window
+window = tk.Tk()
+window.title('test')        
+window.geometery('200x200') 
+------------------------------------------------
+# establish Label , content is Hello World! ,color is yellow ,Font is Arial and size 12
+L = tk.Label(window, text ='Hello World!',bg = 'yellow' , font = ('Arial',12), width = 10, height = 2)
+L.pack()
+window.mainloop()
+---------------------------------------------------
+def point():
+  global point
+  if point == False:
+    point = True
+    var.set('you point that')
+  else:
+    point = False
+    var.set('')
+var = tk.StringVar()
+L = tk.Label(window,textvariable = var ,bg = 'green', width = 12, height = 2)
+L.pack()
+b = tk.Button(window,text = 'point that is', width = 12, height = 1,command = point)
+b.pack()
+
+window.mainloop()
