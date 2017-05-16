@@ -11,17 +11,17 @@ L.pack()
 window.mainloop()
 ---------------------------------------------------
 def point():
-  global point
-  if point == False:
-    point = True
+  global on_point
+  if on_point == False:
+    on_point = True
     var.set('you point that')
   else:
-    point = False
+    on_point = False
     var.set('')
-var = tk.StringVar()
+var = tk.StringVar()   # variable word safe
 L = tk.Label(window,textvariable = var ,bg = 'green', width = 12, height = 2)
 L.pack()
-b = tk.Button(window,text = 'point that is', width = 12, height = 1,command = point)
+b = tk.Button(window,text = 'point that is', width = 12, height = 1,command = point)  #point command excute
 b.pack()
-
+on_point = False #initial on_point is False
 window.mainloop()
