@@ -1,0 +1,22 @@
+import tkinter as tk
+
+
+window = tk.Tk()
+window.title('test')
+window.geometry('300x300')
+
+var = tk.StringVar()
+L = tk.Label(window,text = 'empty', width = 15,bg = 'yellow', height = 2)  #textvariable = var
+L.pack()
+def print_selection():
+    L.config(text = 'selection one '+var.get())  # L parameter can change
+##    var = r1.get()
+##    L.insert('insert',var)
+    
+
+# variable = var --> cover --> value = 'A'
+r1 = tk.Radiobutton(window,text='Option A',variable = var,value = 'A',command = print_selection)
+r1.pack()
+r2 = tk.Radiobutton(window,text='Option B',variable = var,value = 'B',command = print_selection)
+r2.pack()
+window.mainloop()
