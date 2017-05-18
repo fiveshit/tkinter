@@ -1,0 +1,41 @@
+import tkinter as tk
+
+window = tk.Tk()
+window.title('number gmae')
+window.geometry('300x300')
+L1 = tk.Label(window,text = 'input number')
+L1.pack()
+e = tk.Entry(window,show =None)
+e.pack()
+L2 = tk.Label(window,text = 'input code:')
+L2.pack()
+e1 = tk.Entry(window,show ='*')
+e1.pack()
+var = tk.DoubleVar()
+zero =  '0'
+hundred =  '100'
+def insert_val():
+    global zero
+    global hundred
+    val = e.get()
+    code = e1.get()
+    t.insert('insert',val)
+    if code == val:
+        L.config(text ='bomb')
+    elif val > code:
+
+        L.config(text = zero +'range'+ val)
+        hundred = val
+    elif val < code:
+        L.config(text = val +'range'+ hundred)
+        zero = val
+    
+t = tk.Text(window,height = 2)
+##t.pack()
+
+
+L = tk.Label(window,text = 'empty',width = 12,height = 2)
+L.pack()
+B = tk.Button(window,text = 'input val',width = 12,command = insert_val)
+B.pack()
+window.mainloop()
