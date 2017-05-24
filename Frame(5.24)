@@ -1,0 +1,25 @@
+import tkinter as tk
+
+
+window = tk.Tk()
+window.title('test')
+window.geometry('500x500')
+
+L = tk.Label(window,text='',bg = 'yellow')
+L.pack()
+#create Frane
+frm = tk.Frame(window)
+frm.pack()
+#frm_1 inside Frane
+frm_1 = tk.Frame(frm)
+frm_r = tk.Frame(frm)
+frm_1.pack(side = 'left')
+frm_r.pack(side = 'right')
+#word inside frm
+tk.Label(frm_1,text='Hello my world').pack()
+tk.Label(frm_r,text='prefect world').pack()
+tk.Label(frm_r,text='').pack()
+
+
+
+window.mainloop()
