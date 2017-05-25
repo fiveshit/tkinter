@@ -1,0 +1,17 @@
+import tkinter as tk
+
+window = tk.Tk()
+window.title('test')
+window.geometry('200x200')
+# showinfo
+# showwarning
+# askquestion (return Yes or No)
+# askyesno (return Yes or No)
+# askokcancel (return Yes or No)
+# asktrycancel (return Yes or No)
+def hit_me():
+    tk.messagebox.showinfo(title = 'Hi',message = 'error')
+
+tk.Button(window,text = 'hit me', command = hit_me).pack()
+
+window.mainloop()
